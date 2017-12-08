@@ -4,30 +4,18 @@
 
 from openerp import api, fields, models, _
 
-PURCHASE_STATES = [
-    ('draft', _('Draft PO')),
-    ('sent', _('RFQ Sent')),
-    ('to approve', _('To Approve')),
-    ('purchase', _('Purchase Order')),
-    ('done', _('Done')),
-    ('cancel', _('Cancelled')),
-    ('expired', _('Expired')),
-    ]
-
 
 class StockPicking(models.Model):
     _inherit = 'stock.picking'
 
-    purchase_state = fields.Char(
-        compute='_get_purchase_state', string='Purchase status', store=True)
-
-    @api.depends('purchase_id')
-    def _get_purchase_state(self):
-        """Computes value of field purchase_state"""
-        
-        for record in self:
-            if record.purchase_id:
-                record.purchase_state = str()
-                for po_state in PURCHASE_STATES:
-                    if po_state[0] == record.purchase_id.state:
-                        record.purchase_state = po_state[1]
+    purchase_state = fields.Selection(
+        [
+            ('draft', 'Draft PO'),
+            ('sent', 'RFQ Sent'),
+            ('to approve', 'To Approve'),
+            ('purchase', 'Purchase Order'),
+            ('done', 'Done'),
+            ('cancel', 'Cancelled'),
+            ('expired', 'Expired'),
+            ],
+        related='move_lines.purchase_line_id.order_id.state', store=True)
