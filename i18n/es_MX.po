@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0e-20170815\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-09 19:29+0000\n"
-"PO-Revision-Date: 2017-11-09 15:34-0400\n"
+"POT-Creation-Date: 2017-12-08 09:25+0000\n"
+"PO-Revision-Date: 2017-12-08 05:27-0400\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,56 +18,14 @@ msgstr ""
 "X-Generator: Poedit 1.8.11\n"
 
 #. module: picking_purchase_state
-#: code:addons/picking_purchase_state/models/stock_picking.py:13
-#, python-format
-msgid "Cancelled"
-msgstr "Cancelado"
-
-#. module: picking_purchase_state
-#: code:addons/picking_purchase_state/models/stock_picking.py:12
-#, python-format
-msgid "Done"
-msgstr "Hecho"
-
-#. module: picking_purchase_state
-#: code:addons/picking_purchase_state/models/stock_picking.py:8
-#, python-format
-msgid "Draft PO"
-msgstr "Borrador"
-
-#. module: picking_purchase_state
-#: code:addons/picking_purchase_state/models/stock_picking.py:14
-#, python-format
-msgid "Expired"
-msgstr "Vencido"
-
-#. module: picking_purchase_state
-#: code:addons/picking_purchase_state/models/stock_picking.py:11
-#, python-format
-msgid "Purchase Order"
-msgstr "Pedido de Compra"
-
-#. module: picking_purchase_state
 #: model:ir.ui.view,arch_db:picking_purchase_state.stock_picking_purchase_state_search
 msgid "Purchase State"
 msgstr "Estado del Pedido de Compra"
 
 #. module: picking_purchase_state
 #: model:ir.model.fields,field_description:picking_purchase_state.field_stock_picking_purchase_state
-msgid "Purchase status"
-msgstr "Estatus del Pedido de Compra"
-
-#. module: picking_purchase_state
-#: code:addons/picking_purchase_state/models/stock_picking.py:9
-#, python-format
-msgid "RFQ Sent"
-msgstr "Presupuesto Enviado"
-
-#. module: picking_purchase_state
-#: code:addons/picking_purchase_state/models/stock_picking.py:10
-#, python-format
-msgid "To Approve"
-msgstr "Por aprobar"
+msgid "Status"
+msgstr "Estado"
 
 #. module: picking_purchase_state
 #: model:ir.model,name:picking_purchase_state.model_stock_picking
